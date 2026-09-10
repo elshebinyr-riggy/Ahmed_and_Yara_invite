@@ -84,15 +84,16 @@
             top: 180px;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 60%, #696969);
+            width: 150px; /* Increased from 120px */
+            height: 150px; /* Increased from 120px */
+            background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 50%, #5E5E5E 90%);
             border-radius: 50%;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.8), inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
             z-index: 10;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 8px;
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
         /* Silver Wax Seal Inner Ring & Botanical Impression */
@@ -259,57 +260,92 @@
             }
         /* Event Cards */
 
+        /* Event Cards with Image Backgrounds */
         .event-card {
-            background: rgba(255, 255, 255, 0.35);
+            position: relative;
             border: 1px solid var(--border-gold);
             border-radius: 8px;
-            padding: 20px 15px;
+            padding: 25px 15px;
             margin: 25px 0;
+            overflow: hidden;
+            color: #ffffff; /* Ensures text remains legible over images */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Dark shadow behind text for readability */
         }
-
+        
+        /* Background overlay logic for card images */
+        .event-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.45) sepia(0.25); /* Darkens and warms up image to fit the theme */
+            z-index: 0;
+        }
+        
+        /* Specific background image for Event 1 (Katb Ketab / Citadel) */
+        .event-card-citadel::before {
+            background-image: url('YOUR_CITADEL_IMAGE_URL_HERE.jpg');
+        }
+        
+        /* Specific background image for Event 2 (Wedding / Hilton Golf Pyramids) */
+        .event-card-pyramids::before {
+            background-image: url('YOUR_PYRAMIDS_IMAGE_URL_HERE.jpg');
+        }
+        
+        /* Keep content above background image */
+        .event-card-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Event text colors tuned for image overlays */
         .event-title {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--text-dark);
+            color: #F1E5D1;
             font-weight: 600;
             margin-bottom: 10px;
         }
-
+        
         .event-date {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--text-dark);
+            font-size: 1.5rem;
+            color: #ffffff;
             margin: 8px 0;
         }
-
+        
         .event-time {
             font-size: 0.75rem;
             letter-spacing: 2px;
-            color: var(--text-muted);
+            color: #E0D5C1;
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-
+        
         .event-venue {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: var(--text-dark);
+            color: #ffffff;
             margin-bottom: 4px;
         }
-
+        
         .event-location {
             font-size: 0.8rem;
             letter-spacing: 1px;
-            color: var(--text-muted);
+            color: #E0D5C1;
             text-transform: uppercase;
             margin-bottom: 15px;
         }
-        /* Selected card tint preserves the image while softening it to 75% visual opacity. */
-
-        .event-card[data-template-id="div-12"], .event-card[data-template-id="div-21"] {
+        
+        /* Selected card tint preserves the image while softening it to 75% visual opacity.*/
+       /* .event-card[data-template-id="div-12"], .event-card[data-template-id="div-21"] {
             position: relative;
             isolation: isolate;
         }
@@ -327,7 +363,7 @@
             .event-card[data-template-id="div-12"] > *, .event-card[data-template-id="div-21"] > * {
                 position: relative;
                 z-index: 1;
-            }
+            } */
         /* Buttons */
 
         .btn-map {
@@ -459,10 +495,10 @@
 
     <!-- Header Monogram -->      <div class="monogram canva-container" data-html-import-id="html-import-22" data-template-id="div-4" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 29px;">Y | A</div>      <div class="date-header canva-container" data-html-import-id="html-import-23" data-template-id="div-5" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖ 24 . 12 . 2026 ❖</div>      <div class="invitation-text canva-container" data-html-import-id="html-import-24" data-template-id="div-6" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">Together with our familiesWe joyfully invite you to celebrate our wedding</div>
 
-    <!-- Couple Names -->      <div class="couples-names canva-container" data-html-import-id="html-import-26" data-template-id="div-7" style="color: rgb(42, 36, 30); font-style: italic; font-size: 35px;"><canva-inline-text data-template-id="canva-inline-text-8" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Ahmed Shawky El Shebiny</canva-inline-text><span data-html-import-id="html-import-27" data-template-id="span-9" class="canva-text" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 19px;">and</span><canva-inline-text data-template-id="canva-inline-text-10" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Yara Hossam Abushahba</canva-inline-text>      </div>      <div class="divider canva-container" data-html-import-id="html-import-28" data-template-id="div-11" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖</div>
+    <!-- Couple Names -->      <div class="couples-names canva-container" data-html-import-id="html-import-26" data-template-id="div-7" style="color: rgb(42, 36, 30); font-style: italic; font-size: 35px;"><canva-inline-text data-template-id="canva-inline-text-8" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Ahmed Shawky El-Shebiny</canva-inline-text><span data-html-import-id="html-import-27" data-template-id="span-9" class="canva-text" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 19px;">and</span><canva-inline-text data-template-id="canva-inline-text-10" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Yara Hossam Abushahba</canva-inline-text>      </div>      <div class="divider canva-container" data-html-import-id="html-import-28" data-template-id="div-11" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖</div>
 
     <!-- Event 1: Katb Ketab -->
-        <div class="event-card canva-container" data-html-import-id="html-import-29" data-template-id="div-12">
+      <!--  <div class="event-card canva-container" data-html-import-id="html-import-29" data-template-id="div-12">
 
         <div class="event-title canva-container" data-html-import-id="html-import-30" data-template-id="div-13" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 14px;">Katb Ketab Ceremony</div>
 
@@ -503,7 +539,41 @@
 
         <a href="https://maps.google.com/?q=Hilton+Pyramids+Golf+Giza+Egypt" target="_blank" class="btn-map canva-link" onclick="event.stopPropagation();" data-html-import-id="html-import-48" data-template-id="a-30" style="background: rgba(211, 211, 211, 0.25); color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 11px;">VIEW MAP LOCATION</a>
 
-         </div>
+         </div> -->
+
+
+        <!-- Event 1: Katb Ketab -->
+        <div class="event-card event-card-citadel">
+            <div class="event-card-content">
+                <div class="event-title">Katb Ketab Ceremony</div>
+                <div class="divider" style="margin: 5px auto;">❖</div>
+                <div class="event-time">Tuesday</div>
+                <div class="event-date">December 22, 2026</div>
+                <div class="event-time">At Five O'Clock in the Evening</div>
+                
+                <div class="event-venue">SALAH EL DIN CITADEL</div>
+                <div class="event-location">Mohammed Ali Pacha Mosque<br>Cairo, Egypt</div>
+                
+                <a href="https://maps.google.com/?q=Mohammed+Ali+Mosque+Salah+El+Din+Citadel+Cairo" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
+            </div>
+        </div>
+        
+        <!-- Event 2: Wedding Celebration -->
+        <div class="event-card event-card-pyramids">
+            <div class="event-card-content">
+                <div class="event-title">Wedding Celebration</div>
+                <div class="divider" style="margin: 5px auto;">❖</div>
+                <div class="event-time">Thursday</div>
+                <div class="event-date">December 24, 2026</div>
+                <div class="event-time">At Six O'Clock in the Evening</div>
+                
+                <div class="event-venue">HILTON GOLF PYRAMIDS</div>
+                <div class="event-location">Giza, Egypt</div>
+                <div class="event-time" style="margin-top: 5px;">Reception to Follow</div>
+                
+                <a href="https://maps.google.com/?q=Hilton+Pyramids+Golf+Giza+Egypt" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
+            </div>
+        </div>
 
 
         <!-- Arabic Blessing -->
