@@ -94,56 +94,58 @@
             z-index: 6;
         }
 
-        /* Arabic Blessing on Flap */
-        .flap-arabic-blessing {
-            font-family: 'Amiri', serif;
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: #E7B1A5; /* Matched to Rose Gold */;
-            direction: rtl;
-            text-align: center;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-            width: 100%;
-        }
+     /* Top Flap Arabic Blessing - Updated to Silver/Platinum Accent */
+.flap-arabic-blessing {
+    font-family: 'Amiri', serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #E5E7EB; /* Elegant Metallic Silver/Platinum */
+    direction: rtl;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    width: 100%;
+}
 
-        /* Custom Soft Warm Rose Gold Wax Seal (#E7B1A5) */
-        .wax-seal {
-            position: absolute;
-            top: 210px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle at 30% 30%, #F5CEB8, #E7B1A5 50%, #9E6B60 90%);
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.8), inset 0 -4px 8px rgba(0, 0, 0, 0.6);
-            z-index: 10;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 8px;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
+/* Realistic Metallic Silver Wax Seal */
+.wax-seal {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    /* Metallic Silver Outer Gradient */
+    background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 50%, #5E5E5E 90%);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-        .wax-seal-inner {
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 40% 40%, #784B42, #4A2B25);
-            border-radius: 50%;
-            border: 2px solid rgba(245, 206, 184, 0.6);
-            box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding: 10px;
-        }
+.wax-seal-inner {
+    width: 100%;
+    height: 100%;
+    /* Dark Slate / Silver Inner Stamp Backdrop */
+    background: radial-gradient(circle at 40% 40%, #3B4A34, #21291E);
+    border-radius: 50%;
+    border: 2px solid rgba(210, 210, 210, 0.6);
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
 
-        .seal-content-svg {
-            width: 110px;
-            height: 110px;
-        }
+.seal-content-svg {
+    width: 110px;
+    height: 110px;
+}
         .seal-icon {
             width: 38px;
             height: 38px;
@@ -274,18 +276,24 @@
             line-height: 1.6;
         }
 
-        /* Couple Photo inside Card */
-        .card-photo-wrapper {
-            width: 140px;
-            height: 140px;
-            margin: 15px auto 10px auto;
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-            padding: 3px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            background-color: var(--card-bg);
-        }
-        
+     /* Couple Photo inside Card - Square with Gold Border */
+.card-photo-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 15px auto;
+    border-radius: 12px; /* Softened square corners */
+    border: 2px solid var(--gold);
+    padding: 5px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    background-color: var(--card-bg);
+}
+
+.card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Inner photo matches square framing */
+}
         .couples-names {
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
@@ -539,45 +547,47 @@
                 </div>
             </div>
 
-            <!-- Custom Rose Gold Wax Seal (#E7B1A5) -->
-            <div class="wax-seal">
-                <div class="wax-seal-inner">
-                    <svg class="seal-content-svg" viewBox="0 0 200 200">
-                        <!-- Lavender & Tulip Wreath Left Branch -->
-                        <g fill="none" stroke="#F5CEB8" stroke-width="3" stroke-linecap="round">
-                            <path d="M 100 172 C 45 160, 20 108, 42 55" />
-                            <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(231, 177, 165, 0.3)"/>
-                            <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(231, 177, 165, 0.3)"/>
-                            <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#FAF0E6"/>
-                            <circle cx="32" cy="98" r="3.5" fill="#E7B1A5" />
-                            <circle cx="26" cy="88" r="3.5" fill="#E7B1A5" />
-                            <circle cx="24" cy="78" r="3.5" fill="#E7B1A5" />
-                            <circle cx="24" cy="68" r="3.5" fill="#E7B1A5" />
-                        </g>
+<!-- Custom Metallic Silver Wax Seal -->
+<div class="wax-seal">
+    <div class="wax-seal-inner">
+        <svg class="seal-content-svg" viewBox="0 0 200 200">
+            <!-- Lavender & Tulip Wreath Left Branch -->
+            <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
+                <path d="M 100 172 C 45 160, 20 108, 42 55" />
+                <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#E5E7EB"/>
+                <circle cx="32" cy="98" r="3.5" fill="#D1D5DB" />
+                <circle cx="26" cy="88" r="3.5" fill="#D1D5DB" />
+                <circle cx="24" cy="78" r="3.5" fill="#D1D5DB" />
+                <circle cx="24" cy="68" r="3.5" fill="#D1D5DB" />
+            </g>
 
-                        <!-- Lavender & Tulip Wreath Right Branch -->
-                        <g fill="none" stroke="#F5CEB8" stroke-width="3" stroke-linecap="round">
-                            <path d="M 100 172 C 155 160, 180 108, 158 55" />
-                            <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(231, 177, 165, 0.3)"/>
-                            <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(231, 177, 165, 0.3)"/>
-                            <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#FAF0E6"/>
-                            <circle cx="168" cy="98" r="3.5" fill="#E7B1A5" />
-                            <circle cx="174" cy="88" r="3.5" fill="#E7B1A5" />
-                            <circle cx="176" cy="78" r="3.5" fill="#E7B1A5" />
-                            <circle cx="176" cy="68" r="3.5" fill="#E7B1A5" />
-                        </g>
+            <!-- Lavender & Tulip Wreath Right Branch -->
+            <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
+                <path d="M 100 172 C 155 160, 180 108, 158 55" />
+                <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#E5E7EB"/>
+                <circle cx="168" cy="98" r="3.5" fill="#D1D5DB" />
+                <circle cx="174" cy="88" r="3.5" fill="#D1D5DB" />
+                <circle cx="176" cy="78" r="3.5" fill="#D1D5DB" />
+                <circle cx="176" cy="68" r="3.5" fill="#D1D5DB" />
+            </g>
 
-                        <!-- Wreath Bottom Bow -->
-                        <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#FAF0E6" stroke-width="3.5" fill="none"/>
+            <!-- Wreath Bottom Bow -->
+            <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#E5E7EB" stroke-width="3.5" fill="none"/>
 
-                        <!-- Center Monogram "Y | A" -->
-                        <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF5EE" font-weight="500">Y</text>
-                        <line x1="100" y1="70" x2="100" y2="106" stroke="#F5CEB8" stroke-width="2.5"/>
-                        <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF5EE" font-weight="500">A</text>
+            <!-- Center Monogram "Y | A" -->
+            <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">Y</text>
+            <line x1="100" y1="70" x2="100" y2="106" stroke="#D1D5DB" stroke-width="2.5"/>
+            <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">A</text>
 
-                       </svg>
-                </div>
-            </div>
+            <!-- Center Date "12.24.2026" -->
+            <text x="100" y="128" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" fill="#D1D5DB" letter-spacing="3" text-anchor="middle">12.24.2026</text>
+        </svg>
+    </div>
+</div>
 
             <div class="click-hint">Click to Open Invitation</div>
     <!-- Wedding Invitation Content -->    <div class="invitation-wrapper canva-container" data-html-import-id="html-import-20" data-template-id="div-3" style="background: rgb(241, 229, 209);">     <div class="border-inner" data-html-import-id="html-import-21">
@@ -589,7 +599,7 @@
 
         <!-- Couple Photo -->
                     <div class="card-photo-wrapper">
-                        <img src="AhmedYara.JPG" alt="Yara and Ahmed" class="card-photo">
+                        <img src="ahmedYaraPaint.png" alt="Yara and Ahmed" class="card-photo">
                     </div>
     <!-- Couple Names -->      
         <div class="couples-names canva-container" data-html-import-id="html-import-26" data-template-id="div-7" style="color: rgb(42, 36, 30); font-style: italic; font-size: 35px;"><canva-inline-text data-template-id="canva-inline-text-8" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Ahmed Shawky El-Shebiny</canva-inline-text><span data-html-import-id="html-import-27" data-template-id="span-9" class="canva-text" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 19px;">and</span><canva-inline-text data-template-id="canva-inline-text-10" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Yara Hossam Abushahba</canva-inline-text>      </div>      <div class="divider canva-container" data-html-import-id="html-import-28" data-template-id="div-11" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖</div>
