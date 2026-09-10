@@ -81,46 +81,54 @@
     padding-top: 25px;
 }
 
-/* Content Container on Front Flap */
+/* Content Container on Front Flap - Centered */
 .flap-content {
     width: 80%;
     max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: #F1E5D1;
     z-index: 6;
 }
 
-/* Line Drawing Image on Flap */
+/* Line Drawing Image on Flap - Centered & Changed to Cream Color (#F1E5D1) */
 .flap-line-drawing {
     width: 120px;
     height: auto;
-    margin-bottom: 10px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)) brightness(1.1);
-    opacity: 0.9;
+    margin: 0 auto 12px auto;
+    display: block;
+    /* CSS Filter converting black artwork/lines to Cream (#F1E5D1) with subtle glow */
+    filter: invert(93%) sepia(12%) saturate(738%) hue-rotate(338deg) brightness(101%) contrast(91%) drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
-/* Arabic Blessing on Flap */
+/* Arabic Blessing on Flap - Centered */
 .flap-arabic-blessing {
     font-family: 'Amiri', serif;
     font-size: 0.95rem;
     line-height: 1.8;
-    color: var(--gold);
+    color: #E7B1A5; /* Rose Gold */
     direction: rtl;
+    text-align: center;
     text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    width: 100%;
 }
 
-/* Rose Gold Custom Wax Seal */
+/* Custom Soft Warm Rose Gold Wax Seal (#E7B1A5 Base) */
 .wax-seal {
     position: absolute;
-    top: 300px; /* Moved down to align with extended flap tip */
+    top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 150px;
     height: 150px;
-    /* Metallic Rose Gold Outer Gradient */
-    background: radial-gradient(circle at 30% 30%, #F5D3D6, #C47B84 50%, #7A3E48 90%);
+    /* Metallic Warm Rose Gold Gradient */
+    background: radial-gradient(circle at 30% 30%, #F5CEB8, #E7B1A5 50%, #9E6B60 90%);
     border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.8), inset 0 -4px 8px rgba(0, 0, 0, 0.6);
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -132,10 +140,10 @@
 .wax-seal-inner {
     width: 100%;
     height: 100%;
-    /* Rose Gold Inner Stamp Backdrop */
-    background: radial-gradient(circle at 40% 40%, #8C4751, #4A2329);
+    /* Muted Inner Wax Stamp Backdrop */
+    background: radial-gradient(circle at 40% 40%, #784B42, #4A2B25);
     border-radius: 50%;
-    border: 2px solid rgba(245, 211, 214, 0.6);
+    border: 2px solid rgba(245, 206, 184, 0.6);
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
     display: flex;
     justify-content: center;
@@ -513,50 +521,49 @@
         </div>
     </div>
 
-    <!-- Rose Gold Custom Wax Seal -->
     <div class="wax-seal">
-        <div class="wax-seal-inner">
-            <svg class="seal-content-svg" viewBox="0 0 200 200">
-                <!-- Lavender & Tulip Wreath Left Branch -->
-                <g fill="none" stroke="#F5D3D6" stroke-width="3" stroke-linecap="round">
-                    <path d="M 100 172 C 45 160, 20 108, 42 55" />
-                    <!-- Tulip Leaves -->
-                    <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(245, 211, 214, 0.3)"/>
-                    <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(245, 211, 214, 0.3)"/>
-                    <!-- Tulip Flower Heads -->
-                    <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#FBE8EA"/>
-                    <!-- Lavender Buds Left -->
-                    <circle cx="32" cy="98" r="3.5" fill="#F5D3D6" />
-                    <circle cx="26" cy="88" r="3.5" fill="#F5D3D6" />
-                    <circle cx="24" cy="78" r="3.5" fill="#F5D3D6" />
-                    <circle cx="24" cy="68" r="3.5" fill="#F5D3D6" />
-                </g>
+    <div class="wax-seal-inner">
+        <svg class="seal-content-svg" viewBox="0 0 200 200">
+            <!-- Lavender & Tulip Wreath Left Branch -->
+            <g fill="none" stroke="#F5CEB8" stroke-width="3" stroke-linecap="round">
+                <path d="M 100 172 C 45 160, 20 108, 42 55" />
+                <!-- Tulip Leaves -->
+                <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(231, 177, 165, 0.3)"/>
+                <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(231, 177, 165, 0.3)"/>
+                <!-- Tulip Flower Heads -->
+                <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#FAF0E6"/>
+                <!-- Lavender Buds Left -->
+                <circle cx="32" cy="98" r="3.5" fill="#E7B1A5" />
+                <circle cx="26" cy="88" r="3.5" fill="#E7B1A5" />
+                <circle cx="24" cy="78" r="3.5" fill="#E7B1A5" />
+                <circle cx="24" cy="68" r="3.5" fill="#E7B1A5" />
+            </g>
 
-                <!-- Lavender & Tulip Wreath Right Branch -->
-                <g fill="none" stroke="#F5D3D6" stroke-width="3" stroke-linecap="round">
-                    <path d="M 100 172 C 155 160, 180 108, 158 55" />
-                    <!-- Tulip Leaves -->
-                    <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(245, 211, 214, 0.3)"/>
-                    <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(245, 211, 214, 0.3)"/>
-                    <!-- Tulip Flower Heads -->
-                    <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#FBE8EA"/>
-                    <!-- Lavender Buds Right -->
-                    <circle cx="168" cy="98" r="3.5" fill="#F5D3D6" />
-                    <circle cx="174" cy="88" r="3.5" fill="#F5D3D6" />
-                    <circle cx="176" cy="78" r="3.5" fill="#F5D3D6" />
-                    <circle cx="176" cy="68" r="3.5" fill="#F5D3D6" />
-                </g>
+            <!-- Lavender & Tulip Wreath Right Branch -->
+            <g fill="none" stroke="#F5CEB8" stroke-width="3" stroke-linecap="round">
+                <path d="M 100 172 C 155 160, 180 108, 158 55" />
+                <!-- Tulip Leaves -->
+                <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(231, 177, 165, 0.3)"/>
+                <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(231, 177, 165, 0.3)"/>
+                <!-- Tulip Flower Heads -->
+                <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#FAF0E6"/>
+                <!-- Lavender Buds Right -->
+                <circle cx="168" cy="98" r="3.5" fill="#E7B1A5" />
+                <circle cx="174" cy="88" r="3.5" fill="#E7B1A5" />
+                <circle cx="176" cy="78" r="3.5" fill="#E7B1A5" />
+                <circle cx="176" cy="68" r="3.5" fill="#E7B1A5" />
+            </g>
 
-                <!-- Wreath Bottom Bow -->
-                <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#FBE8EA" stroke-width="3.5" fill="none"/>
+            <!-- Wreath Bottom Bow -->
+            <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#FAF0E6" stroke-width="3.5" fill="none"/>
 
-                <!-- Center Monogram "Y | A" -->
-                <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF0F2" font-weight="500">Y</text>
-                <line x1="100" y1="70" x2="100" y2="106" stroke="#F5D3D6" stroke-width="2.5"/>
-                <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF0F2" font-weight="500">A</text>
-            </svg>
-        </div>
+            <!-- Center Monogram "Y | A" -->
+            <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF5EE" font-weight="500">Y</text>
+            <line x1="100" y1="70" x2="100" y2="106" stroke="#F5CEB8" stroke-width="2.5"/>
+            <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF5EE" font-weight="500">A</text>
+        </svg>
     </div>
+</div>
 
     <div class="click-hint">Click to Open Invitation</div>
     <!-- Wedding Invitation Content -->    <div class="invitation-wrapper canva-container" data-html-import-id="html-import-20" data-template-id="div-3" style="background: rgb(241, 229, 209);">     <div class="border-inner" data-html-import-id="html-import-21">
