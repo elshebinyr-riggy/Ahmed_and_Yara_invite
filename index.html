@@ -5,7 +5,7 @@
     <script src="/_sdk/cc55fa1b533807c5.telemetry_sdk.js" integrity="sha512-vW7a0U63BNWyPgkdgvdYnLKXjx/E1nZSXBT1dQT4DrVBh7k4yi55jDX0CvlS9/4Dcuktj9yKi+hEm0rq9hBn1w=="></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yara &amp; Ahmed | Wedding Invitation</title><!-- Google Fonts -->
+    <title>Ahmed &amp; Yara | Wedding Invitation</title><!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
@@ -62,63 +62,93 @@
             overflow: hidden;
             transition: all 0.8s ease;
         }
-        /* Top Flap */
+        /* Top Flap of Envelope - Expanded for Line Drawing & Blessing */
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 340px; /* Increased from 220px to accommodate content */
+    background-color: #232C1F;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transition: transform 0.8s ease 0.4s, z-index 0.2s ease 0.4s;
+    z-index: 5;
+    box-shadow: inset 0 -3px 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
 
-        .envelope-flap {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 220px;
-            background-color: #232C1F;
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-            transform-origin: top center;
-            transition: transform 0.8s ease 0.4s, z-index 0.2s ease 0.4s;
-            z-index: 5;
-            box-shadow: inset 0 -3px 10px rgba(0,0,0,0.3);
-        }
-        /* Silver Wax Seal */
+/* Content Container on Front Flap */
+.flap-content {
+    width: 80%;
+    max-width: 320px;
+    text-align: center;
+    color: #F1E5D1;
+    z-index: 6;
+}
 
-        .wax-seal {
-            position: absolute;
-            top: 180px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px; /* Increased from 120px */
-            height: 150px; /* Increased from 120px */
-            background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 50%, #5E5E5E 90%);
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
-            z-index: 10;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 8px;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        /* Silver Wax Seal Inner Ring & Botanical Impression */
+/* Line Drawing Image on Flap */
+.flap-line-drawing {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)) brightness(1.1);
+    opacity: 0.9;
+}
 
-        .wax-seal-inner {
+/* Arabic Blessing on Flap */
+.flap-arabic-blessing {
+    font-family: 'Amiri', serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--gold);
+    direction: rtl;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Rose Gold Custom Wax Seal */
+.wax-seal {
+    position: absolute;
+    top: 300px; /* Moved down to align with extended flap tip */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    /* Metallic Rose Gold Outer Gradient */
+    background: radial-gradient(circle at 30% 30%, #F5D3D6, #C47B84 50%, #7A3E48 90%);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.wax-seal-inner {
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 40% 40%, #3B4A34, #21291E);
+    /* Rose Gold Inner Stamp Backdrop */
+    background: radial-gradient(circle at 40% 40%, #8C4751, #4A2329);
     border-radius: 50%;
-    border: 2px solid rgba(210, 210, 210, 0.6);
+    border: 2px solid rgba(245, 211, 214, 0.6);
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 10px; /* Gives the inner stamp a clean margin from the silver rim */
+    padding: 10px;
 }
 
-/* Scaled up SVG container */
 .seal-content-svg {
-    width: 110px;  /* Increased from 90% (~108px) to fill the 150px seal cleanly */
+    width: 110px;
     height: 110px;
 }
-
         .seal-icon {
             width: 38px;
             height: 38px;
@@ -353,26 +383,6 @@
             margin-bottom: 15px;
         }
         
-        /* Selected card tint preserves the image while softening it to 75% visual opacity.*/
-       /* .event-card[data-template-id="div-12"], .event-card[data-template-id="div-21"] {
-            position: relative;
-            isolation: isolate;
-        }
-
-            .event-card[data-template-id="div-12"]::before, .event-card[data-template-id="div-21"]::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                border-radius: inherit;
-                background: rgba(128, 128, 128, 0.25);
-                pointer-events: none;
-                z-index: 0;
-            }
-
-            .event-card[data-template-id="div-12"] > *, .event-card[data-template-id="div-21"] > * {
-                position: relative;
-                z-index: 1;
-            } */
         /* Buttons */
 
         .btn-map {
@@ -490,58 +500,65 @@
 <body data-html-import-id="html-import-0" data-template-id="__page-root" style="background: radial-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.4));">
     <div class="envelope-wrapper" id="envelopeWrapper" data-html-import-id="html-import-1">   <div class="envelope canva-container" data-html-import-id="html-import-2" data-template-id="div-0" style="background: rgb(43, 53, 38);">    
         
-    <!-- Top Flap of Envelope -->    <div class="envelope-flap canva-container" data-html-import-id="html-import-3" data-template-id="div-1" style="background: rgb(35, 44, 31);"></div>
-
-    <!-- Custom Silver Rim & Olive Stamp Wax Seal (Enlarged Impression) -->
-<div class="wax-seal">
-    <div class="wax-seal-inner">
-        <svg class="seal-content-svg" viewBox="0 0 200 200">
-            <!-- Lavender & Tulip Wreath Left Branch -->
-            <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
-                <path d="M 100 172 C 45 160, 20 108, 42 55" />
-                <!-- Tulip Leaves -->
-                <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <!-- Tulip Flower Heads -->
-                <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#E5E7EB"/>
-                <!-- Lavender Buds Left -->
-                <circle cx="32" cy="98" r="3.5" fill="#D1D5DB" />
-                <circle cx="26" cy="88" r="3.5" fill="#D1D5DB" />
-                <circle cx="24" cy="78" r="3.5" fill="#D1D5DB" />
-                <circle cx="24" cy="68" r="3.5" fill="#D1D5DB" />
-            </g>
-
-            <!-- Lavender & Tulip Wreath Right Branch -->
-            <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
-                <path d="M 100 172 C 155 160, 180 108, 158 55" />
-                <!-- Tulip Leaves -->
-                <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <!-- Tulip Flower Heads -->
-                <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#E5E7EB"/>
-                <!-- Lavender Buds Right -->
-                <circle cx="168" cy="98" r="3.5" fill="#D1D5DB" />
-                <circle cx="174" cy="88" r="3.5" fill="#D1D5DB" />
-                <circle cx="176" cy="78" r="3.5" fill="#D1D5DB" />
-                <circle cx="176" cy="68" r="3.5" fill="#D1D5DB" />
-            </g>
-
-            <!-- Wreath Bottom Bow -->
-            <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#E5E7EB" stroke-width="3.5" fill="none"/>
-
-            <!-- Enlarged Center Monogram "Y | A" -->
-            <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">Y</text>
-            <line x1="100" y1="70" x2="100" y2="106" stroke="#D1D5DB" stroke-width="2.5"/>
-            <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">A</text>
-
-            <!-- Enlarged Center Date "12.24.2026" -->
-            <text x="100" y="128" font-family="'Montserrat', sans-serif" font-size="13" font-weight="600" fill="#D1D5DB" letter-spacing="3" text-anchor="middle">12.24.2026</text>
-        </svg>
+<!-- Expanded Top Flap with Line Drawing & Arabic Blessing -->
+    <div class="envelope-flap">
+        <div class="flap-content">
+            <!-- Line Drawing Image (replace line-drawing.png with your image file name) -->
+            <img src="AhmedYaraLine.png" alt="Line Drawing Illustration" class="flap-line-drawing">
+            
+            <!-- Arabic Blessing -->
+            <div class="flap-arabic-blessing">
+                اللهم بارك لهما وبارك عليهما واجمع بينهما في خير
+            </div>
+        </div>
     </div>
-</div>
-        
-        <div class="click-hint canva-container" data-html-import-id="html-import-19" data-template-id="div-2" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 12px;">Click to Open Invitation</div>
 
+    <!-- Rose Gold Custom Wax Seal -->
+    <div class="wax-seal">
+        <div class="wax-seal-inner">
+            <svg class="seal-content-svg" viewBox="0 0 200 200">
+                <!-- Lavender & Tulip Wreath Left Branch -->
+                <g fill="none" stroke="#F5D3D6" stroke-width="3" stroke-linecap="round">
+                    <path d="M 100 172 C 45 160, 20 108, 42 55" />
+                    <!-- Tulip Leaves -->
+                    <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(245, 211, 214, 0.3)"/>
+                    <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(245, 211, 214, 0.3)"/>
+                    <!-- Tulip Flower Heads -->
+                    <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#FBE8EA"/>
+                    <!-- Lavender Buds Left -->
+                    <circle cx="32" cy="98" r="3.5" fill="#F5D3D6" />
+                    <circle cx="26" cy="88" r="3.5" fill="#F5D3D6" />
+                    <circle cx="24" cy="78" r="3.5" fill="#F5D3D6" />
+                    <circle cx="24" cy="68" r="3.5" fill="#F5D3D6" />
+                </g>
+
+                <!-- Lavender & Tulip Wreath Right Branch -->
+                <g fill="none" stroke="#F5D3D6" stroke-width="3" stroke-linecap="round">
+                    <path d="M 100 172 C 155 160, 180 108, 158 55" />
+                    <!-- Tulip Leaves -->
+                    <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(245, 211, 214, 0.3)"/>
+                    <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(245, 211, 214, 0.3)"/>
+                    <!-- Tulip Flower Heads -->
+                    <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#FBE8EA"/>
+                    <!-- Lavender Buds Right -->
+                    <circle cx="168" cy="98" r="3.5" fill="#F5D3D6" />
+                    <circle cx="174" cy="88" r="3.5" fill="#F5D3D6" />
+                    <circle cx="176" cy="78" r="3.5" fill="#F5D3D6" />
+                    <circle cx="176" cy="68" r="3.5" fill="#F5D3D6" />
+                </g>
+
+                <!-- Wreath Bottom Bow -->
+                <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#FBE8EA" stroke-width="3.5" fill="none"/>
+
+                <!-- Center Monogram "Y | A" -->
+                <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF0F2" font-weight="500">Y</text>
+                <line x1="100" y1="70" x2="100" y2="106" stroke="#F5D3D6" stroke-width="2.5"/>
+                <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#FFF0F2" font-weight="500">A</text>
+            </svg>
+        </div>
+    </div>
+
+    <div class="click-hint">Click to Open Invitation</div>
     <!-- Wedding Invitation Content -->    <div class="invitation-wrapper canva-container" data-html-import-id="html-import-20" data-template-id="div-3" style="background: rgb(241, 229, 209);">     <div class="border-inner" data-html-import-id="html-import-21">
 
     <!-- Header Monogram -->      <div class="monogram canva-container" data-html-import-id="html-import-22" data-template-id="div-4" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 29px;">Y | A</div>      <div class="date-header canva-container" data-html-import-id="html-import-23" data-template-id="div-5" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖ 24 . 12 . 2026 ❖</div>      <div class="invitation-text canva-container" data-html-import-id="html-import-24" data-template-id="div-6" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">Together with our familiesWe joyfully invite you to celebrate our wedding</div>
@@ -580,10 +597,6 @@
                 <a href="https://maps.google.com/?q=Hilton+Pyramids+Golf+Giza+Egypt" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
             </div>
         </div>
-
-
-        <!-- Arabic Blessing -->
-        <div class="arabic-blessing canva-container" data-html-import-id="html-import-49" data-template-id="div-31" style="color: rgb(42, 36, 30); font-weight: 400; font-style: normal; font-size: 20px;">اللهم بارك لهما وبارك عليهما واجمع بينهما في خيرواغنهما بحلالك عن حرامك وهب لهما الذرية الصالحة.</div>
 
         <!-- RSVP Section -->
         <div class="rsvp-section" onclick="event.stopPropagation();" data-html-import-id="html-import-51">
