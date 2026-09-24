@@ -477,30 +477,52 @@
             pointer-events: auto;
         }
 
-        .modal-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--gold);
-            border-radius: 12px;
-            width: 90%;
-            max-width: 450px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
-        }
+     /* Scrollable Modal Popup Styling */
+.modal-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh; /* Prevents modal from overflowing the screen viewport */
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollable Container inside Modal */
+.modal-body {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 15px 0;
+    overflow-y: auto; /* Enables vertical scrolling for long content */
+    padding-right: 8px; /* Extra room so text doesn't overlap the scrollbar */
+}
+
+/* Elegant Custom Scrollbar for Modal */
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(198, 156, 82, 0.15);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 3px;
+}
 
         .modal-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
             color: var(--text-dark);
             margin-bottom: 10px;
-        }
-
-        .modal-body {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin: 15px 0 20px 0;
         }
 
         .btn-close-modal {
