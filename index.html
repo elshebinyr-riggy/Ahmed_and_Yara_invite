@@ -1,25 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>window["__codeletBootstrap__"] = JSON.parse('{"A":"A","B":"20260909-23-f8555cc","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script>
-    <script src="/_sdk/cc55fa1b533807c5.telemetry_sdk.js" integrity="sha512-vW7a0U63BNWyPgkdgvdYnLKXjx/E1nZSXBT1dQT4DrVBh7k4yi55jDX0CvlS9/4Dcuktj9yKi+hEm0rq9hBn1w=="></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed &amp; Yara | Wedding Invitation</title><!-- Google Fonts -->
+    <title>Ahmed & Yara | Wedding Invitation</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-dark: #1E261B; /* Dark Forest Backdrop */
+            --bg-dark: #1E261B;        /* Dark Forest Backdrop */
             --envelope-green: #2B3526; /* Deep Olive Green Envelope */
-            --card-bg: #F1E5D1; /* Antique Parchment Card Background */
-            --gold: #C69C52; /* Gold Foil Accents */
-            --text-dark: #2A241E; /* Deep Vintage Brown */
+            --card-bg: #F1E5D1;        /* Antique Parchment Card Background */
+            --gold: #C69C52;           /* Gold Foil Accents */
+            --text-dark: #2A241E;      /* Deep Vintage Brown */
             --text-muted: #665C52;
             --border-gold: rgba(198, 156, 82, 0.4);
-            --silver-base: #C0C0C0;
-            --silver-shadow: #8A8A8A;
         }
 
         * {
@@ -40,8 +39,8 @@
             overflow-x: hidden;
             background-image: radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.4) 100%);
         }
-        /* Outer Envelope Container */
 
+        /* Outer Envelope Container */
         .envelope-wrapper {
             position: relative;
             width: 100%;
@@ -51,8 +50,8 @@
             cursor: pointer;
             margin: 20px auto;
         }
-        /* Base Envelope Body */
 
+        /* Base Envelope Body */
         .envelope {
             position: relative;
             width: 100%;
@@ -62,97 +61,59 @@
             overflow: hidden;
             transition: all 0.8s ease;
         }
-       /* Top Flap of Envelope */
+
+        /* Top Flap of Envelope - Cleaned & Resized */
         .envelope-flap {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 250px;
+            height: 200px;
             background-color: #232C1F;
             clip-path: polygon(0 0, 100% 0, 50% 100%);
             transform-origin: top center;
             transition: transform 0.8s ease 0.4s, z-index 0.2s ease 0.4s;
             z-index: 5;
             box-shadow: inset 0 -3px 10px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 35px;
         }
 
-        /* Centered Flap Content Container */
-        .flap-content {
-            width: 85%;
-            max-width: 350px;
-            margin: 0 auto;
+        /* Metallic Silver Wax Seal */
+        .wax-seal {
+            position: absolute;
+            top: 160px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 50%, #5E5E5E 90%);
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
+            z-index: 10;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            text-align: center;
-            z-index: 6;
+            align-items: center;
+            padding: 8px;
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
-     /* Top Flap Arabic Blessing - Updated to Silver/Platinum Accent */
-.flap-arabic-blessing {
-    font-family: 'Amiri', serif;
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: #E5E7EB; /* Elegant Metallic Silver/Platinum */
-    direction: rtl;
-    text-align: center;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-    width: 100%;
-}
+        .wax-seal-inner {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 40% 40%, #3B4A34, #21291E);
+            border-radius: 50%;
+            border: 2px solid rgba(210, 210, 210, 0.6);
+            box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 10px;
+        }
 
-/* Realistic Metallic Silver Wax Seal */
-.wax-seal {
-    position: absolute;
-    top: 210px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    /* Metallic Silver Outer Gradient */
-    background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 50%, #5E5E5E 90%);
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.wax-seal-inner {
-    width: 100%;
-    height: 100%;
-    /* Dark Slate / Silver Inner Stamp Backdrop */
-    background: radial-gradient(circle at 40% 40%, #3B4A34, #21291E);
-    border-radius: 50%;
-    border: 2px solid rgba(210, 210, 210, 0.6);
-    box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 10px;
-}
-
-.seal-content-svg {
-    width: 110px;
-    height: 110px;
-}
-        .seal-icon {
-            width: 38px;
-            height: 38px;
-            fill: none;
-            stroke: #EAEAEA;
-            stroke-width: 1.5;
-            filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+        .seal-content-svg {
+            width: 100px;
+            height: 100px;
         }
 
         .click-hint {
@@ -171,16 +132,11 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                opacity: 0.4;
-            }
-
-            50% {
-                opacity: 1;
-            }
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
         }
-        /* Invitation Card Inside Envelope */
 
+        /* Invitation Card Inside Envelope */
         .invitation-wrapper {
             width: 100%;
             background-color: var(--card-bg);
@@ -196,8 +152,8 @@
             transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s, opacity 0.8s ease 0.6s;
             z-index: 2;
         }
-        /* OPENED STATE ANIMATIONS */
 
+        /* OPENED STATE ANIMATIONS */
         .envelope-wrapper.open .wax-seal {
             opacity: 0;
             transform: translate(-50%, -50%) scale(1.3);
@@ -225,8 +181,8 @@
             box-shadow: none;
             overflow: visible;
         }
-        /* Inner Ornamental Border */
 
+        /* Inner Ornamental Border */
         .border-inner {
             border: 1px solid var(--gold);
             border-radius: 12px;
@@ -258,14 +214,14 @@
             color: var(--gold);
             font-size: 0.9rem;
         }
-
-            .divider::before, .divider::after {
-                content: "";
-                height: 1px;
-                width: 50px;
-                background-color: var(--gold);
-                margin: 0 10px;
-            }
+        
+        .divider::before, .divider::after {
+            content: "";
+            height: 1px;
+            width: 50px;
+            background-color: var(--gold);
+            margin: 0 10px;
+        }
 
         .invitation-text {
             font-size: 0.75rem;
@@ -276,45 +232,29 @@
             line-height: 1.6;
         }
 
-     /* Couple Photo inside Card - Square with Gold Border */
-.card-photo-wrapper {
-    width: 150px;
-    height: 150px;
-    margin: 20px auto 15px auto;
-    border-radius: 12px; /* Softened square corners */
-    border: 2px solid var(--gold);
-    padding: 5px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    background-color: var(--card-bg);
-}
-
-.card-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px; /* Inner photo matches square framing */
-}
+        /* Single-Line Mobile Friendly Names */
         .couples-names {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 1.55rem;
             font-weight: 400;
             font-style: italic;
             color: var(--text-dark);
             margin: 15px 0;
-            line-height: 1.3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-            .couples-names span {
-                display: block;
-                font-size: 1.2rem;
-                font-style: normal;
-                font-family: 'Montserrat', sans-serif;
-                color: var(--gold);
-                margin: 5px 0;
-            }
-        /* Event Cards */
+        .couples-names span {
+            display: inline;
+            font-size: 1.1rem;
+            font-style: normal;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold);
+            margin: 0 6px;
+        }
 
-        /* Event Cards with Image Backgrounds */
+        /* Event Cards with Background Images */
         .event-card {
             position: relative;
             border: 1px solid var(--border-gold);
@@ -322,11 +262,10 @@
             padding: 25px 15px;
             margin: 25px 0;
             overflow: hidden;
-            color: #ffffff; /* Ensures text remains legible over images */
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Dark shadow behind text for readability */
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
-        
-        /* Background overlay logic for card images */
+
         .event-card::before {
             content: "";
             position: absolute;
@@ -336,27 +275,23 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            filter: brightness(0.45) sepia(0.25); /* Darkens and warms up image to fit the theme */
+            filter: brightness(0.45) sepia(0.25);
             z-index: 0;
         }
-        
-        /* Specific background image for Event 1 (Katb Ketab / Citadel) */
+
         .event-card-citadel::before {
-            background-image: url(katbketabCardbackground.jpeg);
+            background-image: url('katbketabCardbackground.jpeg');
         }
-        
-        /* Specific background image for Event 2 (Wedding / Hilton Golf Pyramids) */
+
         .event-card-pyramids::before {
-            background-image: url(weddingCardbackground.jpeg);
+            background-image: url('weddingCardbackground.jpeg');
         }
-        
-        /* Keep content above background image */
+
         .event-card-content {
             position: relative;
             z-index: 1;
         }
-        
-        /* Event text colors tuned for image overlays */
+
         .event-title {
             font-size: 0.9rem;
             letter-spacing: 3px;
@@ -365,14 +300,14 @@
             font-weight: 600;
             margin-bottom: 10px;
         }
-        
+
         .event-date {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             color: #ffffff;
             margin: 8px 0;
         }
-        
+
         .event-time {
             font-size: 0.75rem;
             letter-spacing: 2px;
@@ -380,7 +315,7 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-        
+
         .event-venue {
             font-family: 'Playfair Display', serif;
             font-size: 1.15rem;
@@ -389,7 +324,7 @@
             color: #ffffff;
             margin-bottom: 4px;
         }
-        
+
         .event-location {
             font-size: 0.8rem;
             letter-spacing: 1px;
@@ -397,28 +332,37 @@
             text-transform: uppercase;
             margin-bottom: 15px;
         }
-        
-        /* Buttons */
 
-        .btn-map {
-            display: inline-block;
-            text-decoration: none;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+        /* Buttons Container */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
         }
 
-            .btn-map:hover {
-                background-color: var(--gold);
-                color: #ffffff;
-            }
-        /* Arabic Blessing Section */
+        .btn-map, .btn-parking {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 0.68rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #ffffff;
+            border: 1px solid var(--gold);
+            background: rgba(198, 156, 82, 0.35);
+            padding: 8px 14px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
+        .btn-map:hover, .btn-parking:hover {
+            background-color: var(--gold);
+            color: #ffffff;
+        }
+
+        /* Full Arabic Blessing Section */
         .arabic-blessing {
             font-family: 'Amiri', serif;
             font-size: 1.25rem;
@@ -431,33 +375,42 @@
         }
 
         /* Dress Code Section */
-.dress-code-section {
-    margin-top: 30px;
-    padding-top: 25px;
-    border-top: 1px solid var(--border-gold);
-}
+        .dress-code-section {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-gold);
+        }
 
-.dress-code-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: var(--text-dark);
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
+        .dress-code-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
 
-.dress-code-text {
-    font-size: 0.85rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
+        .dress-code-text {
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
         /* RSVP Form Section */
-
         .rsvp-section {
             margin-top: 30px;
             padding-top: 25px;
             border-top: 1px solid var(--border-gold);
+        }
+
+        .rsvp-deadline {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .rsvp-title {
@@ -471,14 +424,14 @@
             text-align: left;
         }
 
-            .form-group label {
-                display: block;
-                font-size: 0.75rem;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: var(--text-muted);
-                margin-bottom: 5px;
-            }
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
 
         .form-control {
             width: 100%;
@@ -491,11 +444,11 @@
             color: var(--text-dark);
         }
 
-            .form-control:focus {
-                outline: none;
-                border-color: var(--gold);
-                background: #ffffff;
-            }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: #ffffff;
+        }
 
         .btn-submit {
             width: 100%;
@@ -511,160 +464,324 @@
             transition: all 0.3s ease;
         }
 
-            .btn-submit:hover {
-                background-color: var(--gold);
-                color: #ffffff;
-            }
+        .btn-submit:hover {
+            background-color: var(--gold);
+            color: #ffffff;
+        }
+
+        /* Modal Popup Styling for Parking Instructions */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 450px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .modal-body {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 15px 0 20px 0;
+        }
+
+        .btn-close-modal {
+            background-color: var(--envelope-green);
+            color: var(--card-bg);
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
 
         @media (max-width: 480px) {
             .invitation-wrapper {
                 padding: 20px 15px;
             }
-
             .border-inner {
                 padding: 20px 10px;
             }
-
             .couples-names {
-                font-size: 1.8rem;
+                font-size: 1.2rem;
             }
         }
     </style>
-    <script src="/_sdk/ad00ce977a5c2ece.resizing_sdk.js" integrity="sha512-bog4wGkBPPOhR0ljLsI2R9w0aS7AHt6iC4MNxsBmTL7IysBG15pB3x/bOQf//NXwh2kdtoBZiW6QfBMagGYlWA=="></script>
-    <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-    <script src="/_sdk/d87b80b4433bab6b.data_sdk.js" type="text/javascript" integrity="sha512-JKynAZ3aIUkxrmu1y4Enod3283hZsIIaBhOwwM+go3QT3MqYMvKrAZczNoL1jjjyzi8i7cD2EiXs1sP4BPwZ3g=="></script>
 </head>
-<body data-html-import-id="html-import-0" data-template-id="__page-root" style="background: radial-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.4));">
-    <div class="envelope-wrapper" id="envelopeWrapper" data-html-import-id="html-import-1">   <div class="envelope canva-container" data-html-import-id="html-import-2" data-template-id="div-0" style="background: rgb(43, 53, 38);">    
-        
-<!-- Top Flap with Centered Arabic Blessing -->
-            <div class="envelope-flap">
-                <div class="flap-content">
-                    <div class="flap-arabic-blessing">
-                        اللهم بارك لهما وبارك عليهما واجمع بينهما في خير
-                    </div>
+<body>
+
+    <!-- Audio Player (Loops when invitation opens) -->
+    <audio id="weddingMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope">
+            
+            <!-- Cleaned Top Flap -->
+            <div class="envelope-flap"></div>
+
+            <!-- Custom Metallic Silver Wax Seal -->
+            <div class="wax-seal">
+                <div class="wax-seal-inner">
+                    <svg class="seal-content-svg" viewBox="0 0 200 200">
+                        <!-- Lavender & Tulip Wreath Left Branch -->
+                        <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
+                            <path d="M 100 172 C 45 160, 20 108, 42 55" />
+                            <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                            <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                            <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#E5E7EB"/>
+                            <circle cx="32" cy="98" r="3.5" fill="#D1D5DB" />
+                            <circle cx="26" cy="88" r="3.5" fill="#D1D5DB" />
+                            <circle cx="24" cy="78" r="3.5" fill="#D1D5DB" />
+                            <circle cx="24" cy="68" r="3.5" fill="#D1D5DB" />
+                        </g>
+
+                        <!-- Lavender & Tulip Wreath Right Branch -->
+                        <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
+                            <path d="M 100 172 C 155 160, 180 108, 158 55" />
+                            <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                            <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
+                            <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#E5E7EB"/>
+                            <circle cx="168" cy="98" r="3.5" fill="#D1D5DB" />
+                            <circle cx="174" cy="88" r="3.5" fill="#D1D5DB" />
+                            <circle cx="176" cy="78" r="3.5" fill="#D1D5DB" />
+                            <circle cx="176" cy="68" r="3.5" fill="#D1D5DB" />
+                        </g>
+
+                        <!-- Wreath Bottom Bow -->
+                        <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#E5E7EB" stroke-width="3.5" fill="none"/>
+
+                        <!-- Center Monogram "Y | A" -->
+                        <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">Y</text>
+                        <line x1="100" y1="70" x2="100" y2="106" stroke="#D1D5DB" stroke-width="2.5"/>
+                        <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">A</text>
+                    </svg>
                 </div>
             </div>
 
-<!-- Custom Metallic Silver Wax Seal -->
-<div class="wax-seal">
-    <div class="wax-seal-inner">
-        <svg class="seal-content-svg" viewBox="0 0 200 200">
-            <!-- Lavender & Tulip Wreath Left Branch -->
-            <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
-                <path d="M 100 172 C 45 160, 20 108, 42 55" />
-                <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#E5E7EB"/>
-                <circle cx="32" cy="98" r="3.5" fill="#D1D5DB" />
-                <circle cx="26" cy="88" r="3.5" fill="#D1D5DB" />
-                <circle cx="24" cy="78" r="3.5" fill="#D1D5DB" />
-                <circle cx="24" cy="68" r="3.5" fill="#D1D5DB" />
-            </g>
-
-            <!-- Lavender & Tulip Wreath Right Branch -->
-            <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
-                <path d="M 100 172 C 155 160, 180 108, 158 55" />
-                <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#E5E7EB"/>
-                <circle cx="168" cy="98" r="3.5" fill="#D1D5DB" />
-                <circle cx="174" cy="88" r="3.5" fill="#D1D5DB" />
-                <circle cx="176" cy="78" r="3.5" fill="#D1D5DB" />
-                <circle cx="176" cy="68" r="3.5" fill="#D1D5DB" />
-            </g>
-
-            <!-- Wreath Bottom Bow -->
-            <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#E5E7EB" stroke-width="3.5" fill="none"/>
-
-            <!-- Center Monogram "Y | A" -->
-            <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">Y</text>
-            <line x1="100" y1="70" x2="100" y2="106" stroke="#D1D5DB" stroke-width="2.5"/>
-            <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">A</text>
-        </svg>
-    </div>
-</div>
-
             <div class="click-hint">Click to Open Invitation</div>
-    <!-- Wedding Invitation Content -->    <div class="invitation-wrapper canva-container" data-html-import-id="html-import-20" data-template-id="div-3" style="background: rgb(241, 229, 209);">     <div class="border-inner" data-html-import-id="html-import-21">
 
-    <!-- Header Monogram -->      
-        <div class="monogram canva-container" data-html-import-id="html-import-22" data-template-id="div-4" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 29px;">Y | A</div>      
-        <div class="date-header canva-container" data-html-import-id="html-import-23" data-template-id="div-5" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖ 22 &amp; 24 . 12 . 2026 ❖</div>      
-        <div class="invitation-text canva-container" data-html-import-id="html-import-24" data-template-id="div-6" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">Together with our families we joyfully invite you to celebrate our Wedding!</div>
+            <!-- Wedding Invitation Content -->
+            <div class="invitation-wrapper">
+                <div class="border-inner">
+                    
+                    <!-- Header Monogram -->
+                    <div class="monogram">Y | A</div>
+                    <div class="date-header">❖ 22 & 24 . 12 . 2026 ❖</div>
 
-        <!-- Couple Photo -->
-                    <div class="card-photo-wrapper">
-                        <img src="ahmedYaraPaint.png" alt="Yara and Ahmed" class="card-photo">
+                    <div class="invitation-text">
+                        Together with our families<br>We joyfully invite you to celebrate our Wedding!
                     </div>
-    <!-- Couple Names -->      
-        <div class="couples-names canva-container" data-html-import-id="html-import-26" data-template-id="div-7" style="color: rgb(42, 36, 30); font-style: italic; font-size: 35px;"><canva-inline-text data-template-id="canva-inline-text-8" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Ahmed Shawky El-Shebiny</canva-inline-text><span data-html-import-id="html-import-27" data-template-id="span-9" class="canva-text" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 19px;">and</span><canva-inline-text data-template-id="canva-inline-text-10" class="canva-text" style="color: rgb(42, 36, 30); font-weight: 400; font-style: italic; font-size: 35px;">Yara Hossam Abushahba</canva-inline-text>      </div>      <div class="divider canva-container" data-html-import-id="html-import-28" data-template-id="div-11" style="color: rgb(198, 156, 82); font-weight: 400; font-style: normal; font-size: 14px;">❖</div>
-    
-        <!-- Event 1: Katb Ketab -->
-        <div class="event-card event-card-citadel">
-            <div class="event-card-content">
-                <div class="event-title">Katb Ketab Ceremony</div>
-                <div class="divider" style="margin: 5px auto;">❖</div>
-                <div class="event-time">Tuesday</div>
-                <div class="event-date">December 22, 2026</div>
-                <div class="event-time">At Five O'Clock in the Evening</div>
-                
-                <div class="event-venue">SALAH EL DIN CITADEL</div>
-                <div class="event-location">Mohammed Ali Pacha Mosque<br>Cairo, Egypt</div>
-                
-                <a href="https://maps.google.com/?q=Mohammed+Ali+Mosque+Salah+El+Din+Citadel+Cairo" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
-            </div>
-        </div>
-        
-        <!-- Event 2: Wedding Celebration -->
-        <div class="event-card event-card-pyramids">
-            <div class="event-card-content">
-                <div class="event-title">Wedding Celebration</div>
-                <div class="divider" style="margin: 5px auto;">❖</div>
-                <div class="event-time">Thursday</div>
-                <div class="event-date">December 24, 2026</div>
-                <div class="event-time">At Six O'Clock in the Evening</div>
-                
-                <div class="event-venue">HILTON GOLF PYRAMIDS</div>
-                <div class="event-location">Giza, Egypt</div>
-                <div class="event-time" style="margin-top: 5px;">Reception to Follow</div>
-                
-                <a href="https://maps.google.com/?q=Hilton+Pyramids+Golf+Giza+Egypt" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
-            </div>
-        </div>
 
-        <!-- Dress Code Section -->
-<div class="dress-code-section" onclick="event.stopPropagation();">
-    <div class="dress-code-title">Dress Code</div>
-    <div class="divider" style="margin: 8px auto;">❖</div>
-    <div class="dress-code-text">
-        Black Tie & Formal Attire
+                    <!-- Single-Line Names without Middle Names -->
+                    <div class="couples-names">
+                        Ahmed El-Shebiny <span>&</span> Yara Abushahba
+                    </div>
+
+                    <div class="divider">❖</div>
+
+                    <!-- Event 1: Katb Ketab -->
+                    <div class="event-card event-card-citadel">
+                        <div class="event-card-content">
+                            <div class="event-title">Katb Ketab Ceremony</div>
+                            <div class="divider" style="margin: 5px auto;">❖</div>
+                            <div class="event-time">Tuesday • December 22, 2026</div>
+                            <div class="event-date">4:30 PM - 9:00 PM</div>
+                            
+                            <div class="event-venue">SALAH EL DIN CITADEL</div>
+                            <div class="event-location">Mohammed Ali Pacha Mosque<br>Cairo, Egypt</div>
+                            
+                            <div class="btn-group">
+                                <a href="https://maps.google.com/?q=Mohammed+Ali+Mosque+Salah+El+Din+Citadel+Cairo" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
+                                <button type="button" class="btn-parking" onclick="event.stopPropagation(); openParkingModal('citadel');">Parking Instructions</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2: Wedding Celebration -->
+                    <div class="event-card event-card-pyramids">
+                        <div class="event-card-content">
+                            <div class="event-title">Wedding Celebration</div>
+                            <div class="divider" style="margin: 5px auto;">❖</div>
+                            <div class="event-time">Thursday • December 24, 2026</div>
+                            <div class="event-date">6:00 PM - 11:00 PM</div>
+                            
+                            <div class="event-venue">HILTON GOLF PYRAMIDS</div>
+                            <div class="event-location">Giza, Egypt</div>
+                            <div class="event-time" style="margin-top: 5px;">Reception to Follow</div>
+                            
+                            <div class="btn-group">
+                                <a href="https://maps.google.com/?q=Hilton+Pyramids+Golf+Giza+Egypt" target="_blank" class="btn-map" onclick="event.stopPropagation();">View Map Location</a>
+                                <button type="button" class="btn-parking" onclick="event.stopPropagation(); openParkingModal('pyramids');">Parking Instructions</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full Arabic Blessing Section Restored -->
+                    <div class="arabic-blessing">
+                        اللهم بارك لهما وبارك عليهما واجمع بينهما في خير<br>
+                        واغنهما بحلالك عن حرامك وهب لهما الذرية الصالحة.
+                    </div>
+
+                    <!-- Dress Code Section -->
+                    <div class="dress-code-section" onclick="event.stopPropagation();">
+                        <div class="dress-code-title">Dress Code</div>
+                        <div class="divider" style="margin: 8px auto;">❖</div>
+                        <div class="dress-code-text">
+                            Black Tie & Formal Attire
+                        </div>
+                    </div>
+
+                    <!-- RSVP Section -->
+                    <div class="rsvp-section" onclick="event.stopPropagation();">
+                        
+                        <div class="rsvp-deadline">RSVP by: November 28th, 2026</div>
+                        <div class="rsvp-title">Kindly RSVP</div>
+
+                        <form action="https://formspree.io/f/xzebyagr" method="POST">
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="Full Name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="Email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="attendance">Attendance Option</label>
+                                <select id="attendance" name="Attendance Selection" class="form-control" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Attending on Dec 22nd Only (Katb Ketab)">Attending on the 22nd (Katb Ketab)</option>
+                                    <option value="Attending on Dec 24th Only (Wedding)">Attending on the 24th (Wedding)</option>
+                                    <option value="Attending Both Events (Dec 22nd & 24th)">Attending Both Events</option>
+                                </select>
+                            </div>
+
+                            <!-- Family Count Dropdown (1 to 5) -->
+                            <div class="form-group">
+                                <label for="family_count">Total Family Members Attending</label>
+                                <select id="family_count" name="Family/Guests Count" class="form-control" onchange="toggleFamilyNamesField(this.value)" required>
+                                    <option value="1">1 (Just Me)</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                </select>
+                            </div>
+
+                            <!-- Dynamic Extra Names Field (Shows if > 1) -->
+                            <div class="form-group" id="familyNamesGroup" style="display: none;">
+                                <label for="family_names">Names of Additional Family Members</label>
+                                <input type="text" id="family_names" name="Additional Guest Names" class="form-control" placeholder="E.g., John Doe, Jane Doe">
+                            </div>
+
+                            <button type="submit" class="btn-submit">Confirm RSVP</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
 
-        <!-- RSVP Section -->
-        <div class="rsvp-section" onclick="event.stopPropagation();" data-html-import-id="html-import-51">
+    <!-- Modal Pop-up for Parking Instructions -->
+    <div class="modal-overlay" id="parkingModal" onclick="closeParkingModal();">
+        <div class="modal-card" onclick="event.stopPropagation();">
+            <div class="modal-title" id="modalTitle">Parking Instructions</div>
+            <div class="divider" style="margin: 5px auto;">❖</div>
+            <div class="modal-body" id="modalBody">
+                Parking details will be populated here shortly.
+            </div>
+            <button class="btn-close-modal" onclick="closeParkingModal();">Close</button>
+        </div>
+    </div>
 
-        <div class="rsvp-title canva-container" data-html-import-id="html-import-52" data-template-id="div-32" style="color: rgb(42, 36, 30); font-weight: 400; font-style: normal; font-size: 24px;">Kindly RSVP</div>
+    <script>
+        // Open Envelope Animation + Play Music
+        const envelopeWrapper = document.getElementById('envelopeWrapper');
+        const weddingMusic = document.getElementById('weddingMusic');
 
-        <form action="https://formspree.io/f/xzebyagr" method="POST" data-html-import-id="html-import-53">
+        envelopeWrapper.addEventListener('click', function () {
+            if (!envelopeWrapper.classList.contains('open')) {
+                envelopeWrapper.classList.add('open');
+                if (weddingMusic) {
+                    weddingMusic.play().catch(e => console.log("Audio play blocked by browser policies until click interaction."));
+                }
+            }
+        });
 
-            <div class="form-group" data-html-import-id="html-import-54">
+        // Toggle Family Member Names Field
+        function toggleFamilyNamesField(count) {
+            const familyGroup = document.getElementById('familyNamesGroup');
+            const familyInput = document.getElementById('family_names');
+            if (parseInt(count) > 1) {
+                familyGroup.style.display = 'block';
+                familyInput.setAttribute('required', 'required');
+            } else {
+                familyGroup.style.display = 'none';
+                familyInput.removeAttribute('required');
+                familyInput.value = '';
+            }
+        }
 
-           <label for="name" data-html-import-id="html-import-55" data-template-id="label-33" class="canva-text" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">FULL NAME</label> <input type="text" id="name" name="Full Name" class="form-control canva-input" placeholder="Enter your full name" required="" data-html-import-id="html-import-56" data-template-id="input-34" style="background: rgba(255, 255, 255, 0.6); color: rgb(42, 36, 30); font-size: 14px;">        </div>
+        // Modal Functionality for Parking Instructions
+        function openParkingModal(venue) {
+            const modal = document.getElementById('parkingModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
 
-            <div class="form-group" data-html-import-id="html-import-57">         <label for="email" data-html-import-id="html-import-58" data-template-id="label-35" class="canva-text" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">EMAIL ADDRESS</label> <input type="email" id="email" name="Email" class="form-control canva-input" placeholder="Enter your email" required="" data-html-import-id="html-import-59" data-template-id="input-36" style="background: rgba(255, 255, 255, 0.6); color: rgb(42, 36, 30); font-size: 14px;">        </div>
+            if (venue === 'citadel') {
+                modalTitle.innerText = "Salah El Din Citadel Parking";
+                modalBody.innerHTML = "Valet and designated guest parking are available near the main gate of Mohammed Ali Pacha Mosque.<br><br><i>(Detailed parking instructions to be populated here.)</i>";
+            } else if (venue === 'pyramids') {
+                modalTitle.innerText = "Hilton Golf Pyramids Parking";
+                modalBody.innerHTML = "Complimentary self-parking and valet services are provided at the main resort entrance.<br><br><i>(Detailed parking instructions to be populated here.)</i>";
+            }
+            modal.classList.add('active');
+        }
 
-            <div class="form-group" data-html-import-id="html-import-60">         <label for="attendance" data-html-import-id="html-import-61" data-template-id="label-37" class="canva-text" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">ATTENDANCE OPTION</label> <select id="attendance" name="Attendance Selection" class="form-control canva-input" required="" data-html-import-id="html-import-62" data-template-id="select-38" style="background: rgba(255, 255, 255, 0.6); color: rgb(42, 36, 30); font-size: 14px;"> <option value="" disabled="" selected="" data-html-import-id="html-import-63" data-template-id="option-39" style="color: rgb(42, 36, 30); font-weight: 400; font-style: normal; font-size: 16px;">Select an option</option> <option value="Attending on Dec 22nd Only (Katb Ketab)" data-html-import-id="html-import-64" data-template-id="option-40" style="color: rgb(42, 36, 30); font-weight: 400; font-style: normal; font-size: 16px;">Attending on the 22nd (Katb Ketab)</option> <option value="Attending on Dec 24th Only (Wedding)" data-html-import-id="html-import-65" data-template-id="option-41" style="color: rgb(42, 36, 30); font-weight: 400; font-style: normal; font-size: 16px;">Attending on the 24th (Wedding)</option> <option value="Attending Both Events (Dec 22nd &amp; 24th)" data-html-import-id="html-import-66" data-template-id="option-42" style="color: rgb(42, 36, 30); font-weight: 400; font-style: normal; font-size: 16px;">Attending Both Events</option> </select>        </div>
-
-            <div class="form-group" data-html-import-id="html-import-67">         <label for="family_count" data-html-import-id="html-import-68" data-template-id="label-43" class="canva-text" style="color: rgb(102, 92, 82); font-weight: 400; font-style: normal; font-size: 12px;">TOTAL FAMILY MEMBERS / GUESTS ATTENDING</label> <input type="number" id="family_count" name="Family/Guests Count" class="form-control canva-input" min="1" max="10" value="1" required="" data-html-import-id="html-import-69" data-template-id="input-44" style="background: rgba(255, 255, 255, 0.6); color: rgb(42, 36, 30); font-size: 14px;">        </div>
-
-            <button type="submit" class="btn-submit canva-button" data-html-import-id="html-import-70" data-template-id="button-45" style="background: rgb(43, 53, 38); color: rgb(241, 229, 209); font-weight: 400; font-style: normal; font-size: 13px;">CONFIRM RSVP</button>
-            </form>
-
-            </div>  </div>    </div>   </div>  </div>
-    <script data-html-import-id="html-import-71">const envelopeWrapper = document.getElementById('envelopeWrapper'); envelopeWrapper.addEventListener('click', function () { if (!envelopeWrapper.classList.contains('open')) { envelopeWrapper.classList.add('open'); } });</script>
-    <script src="/_sdk/28ef9a9c158ade85.editing_sdk.js" integrity="sha512-b2ftV3vcbFoEKwAh27yhGjsMRDP5mQbMuuQyXgMOZ2V+jzbFx6ckLaeoeft9IoTAR5SMDA8pn72E2vpC3mmGSQ=="></script>
+        function closeParkingModal() {
+            document.getElementById('parkingModal').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
