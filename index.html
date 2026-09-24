@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -62,7 +62,7 @@
             transition: all 0.8s ease;
         }
 
-        /* Top Flap of Envelope - Cleaned & Resized */
+        /* Top Flap of Envelope */
         .envelope-flap {
             position: absolute;
             top: 0;
@@ -77,7 +77,7 @@
             box-shadow: inset 0 -3px 10px rgba(0,0,0,0.3);
         }
 
-        /* Metallic Silver Wax Seal */
+        /* Image-Based Wax Seal */
         .wax-seal {
             position: absolute;
             top: 160px;
@@ -85,35 +85,18 @@
             transform: translate(-50%, -50%);
             width: 140px;
             height: 140px;
-            background: radial-gradient(circle at 30% 30%, #E8E8E8, #A9A9A9 50%, #5E5E5E 90%);
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.9), inset 0 -4px 8px rgba(0, 0, 0, 0.7);
             z-index: 10;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 8px;
             transition: opacity 0.5s ease, transform 0.5s ease;
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6));
         }
 
-        .wax-seal-inner {
+        .wax-seal-img {
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 40% 40%, #3B4A34, #21291E);
-            border-radius: 50%;
-            border: 2px solid rgba(210, 210, 210, 0.6);
-            box-shadow: inset 0 3px 6px rgba(0,0,0,0.7), 0 0 4px rgba(255,255,255,0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding: 10px;
-        }
-
-        .seal-content-svg {
-            width: 100px;
-            height: 100px;
+            object-fit: contain;
         }
 
         .click-hint {
@@ -232,26 +215,28 @@
             line-height: 1.6;
         }
 
-        /* Single-Line Mobile Friendly Names */
-        .couples-names {
+        /* 3-Line Couple Names Styling */
+        .couples-names-container {
+            margin: 20px 0;
+        }
+
+        .groom-name, .bride-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.55rem;
+            font-size: 1.45rem;
             font-weight: 400;
             font-style: italic;
             color: var(--text-dark);
-            margin: 15px 0;
+            line-height: 1.4;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
-        .couples-names span {
-            display: inline;
-            font-size: 1.1rem;
-            font-style: normal;
-            font-family: 'Montserrat', sans-serif;
+        .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
             color: var(--gold);
-            margin: 0 6px;
+            margin: 4px 0;
+            display: block;
         }
 
         /* Event Cards with Background Images */
@@ -404,19 +389,20 @@
             border-top: 1px solid var(--border-gold);
         }
 
+        .rsvp-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
         .rsvp-deadline {
             font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .rsvp-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            color: #8C5B14; /* High contrast dark gold tone */
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         .form-group {
@@ -531,13 +517,13 @@
 
         @media (max-width: 480px) {
             .invitation-wrapper {
-                padding: 20px 15px;
+                padding: 20px 12px;
             }
             .border-inner {
                 padding: 20px 10px;
             }
-            .couples-names {
-                font-size: 1.2rem;
+            .groom-name, .bride-name {
+                font-size: 1.15rem;
             }
         }
     </style>
@@ -555,43 +541,9 @@
             <!-- Cleaned Top Flap -->
             <div class="envelope-flap"></div>
 
-            <!-- Custom Metallic Silver Wax Seal -->
+            <!-- Uploaded Image Wax Seal -->
             <div class="wax-seal">
-                <div class="wax-seal-inner">
-                    <svg class="seal-content-svg" viewBox="0 0 200 200">
-                        <!-- Lavender & Tulip Wreath Left Branch -->
-                        <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
-                            <path d="M 100 172 C 45 160, 20 108, 42 55" />
-                            <path d="M 75 152 C 50 140, 38 122, 45 110 C 58 116, 68 132, 75 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                            <path d="M 48 115 C 28 95, 22 72, 32 64 C 40 72, 44 92, 48 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                            <path d="M 42 55 C 30 43, 36 30, 45 38 C 53 30, 60 43, 48 57 Z" fill="#E5E7EB"/>
-                            <circle cx="32" cy="98" r="3.5" fill="#D1D5DB" />
-                            <circle cx="26" cy="88" r="3.5" fill="#D1D5DB" />
-                            <circle cx="24" cy="78" r="3.5" fill="#D1D5DB" />
-                            <circle cx="24" cy="68" r="3.5" fill="#D1D5DB" />
-                        </g>
-
-                        <!-- Lavender & Tulip Wreath Right Branch -->
-                        <g fill="none" stroke="#D1D5DB" stroke-width="3" stroke-linecap="round">
-                            <path d="M 100 172 C 155 160, 180 108, 158 55" />
-                            <path d="M 125 152 C 150 140, 162 122, 155 110 C 142 116, 132 132, 125 152 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                            <path d="M 152 115 C 172 95, 178 72, 168 64 C 160 72, 156 92, 152 115 Z" fill="rgba(209, 213, 220, 0.3)"/>
-                            <path d="M 158 55 C 170 43, 164 30, 155 38 C 147 30, 140 43, 152 57 Z" fill="#E5E7EB"/>
-                            <circle cx="168" cy="98" r="3.5" fill="#D1D5DB" />
-                            <circle cx="174" cy="88" r="3.5" fill="#D1D5DB" />
-                            <circle cx="176" cy="78" r="3.5" fill="#D1D5DB" />
-                            <circle cx="176" cy="68" r="3.5" fill="#D1D5DB" />
-                        </g>
-
-                        <!-- Wreath Bottom Bow -->
-                        <path d="M 88 170 C 98 178, 102 178, 112 170" stroke="#E5E7EB" stroke-width="3.5" fill="none"/>
-
-                        <!-- Center Monogram "Y | A" -->
-                        <text x="62" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">Y</text>
-                        <line x1="100" y1="70" x2="100" y2="106" stroke="#D1D5DB" stroke-width="2.5"/>
-                        <text x="114" y="100" font-family="'Playfair Display', serif" font-size="38" fill="#F3F4F6" font-weight="500">A</text>
-                    </svg>
-                </div>
+                <img src="waxseal.png" alt="Wax Seal" class="wax-seal-img">
             </div>
 
             <div class="click-hint">Click to Open Invitation</div>
@@ -608,9 +560,11 @@
                         Together with our families<br>We joyfully invite you to celebrate our Wedding!
                     </div>
 
-                    <!-- Single-Line Names without Middle Names -->
-                    <div class="couples-names">
-                        Ahmed El-Shebiny <span>&</span> Yara Abushahba
+                    <!-- 3-Line Couple Names with Middle Names -->
+                    <div class="couples-names-container">
+                        <div class="groom-name">Ahmed Shawky El-Shebiny</div>
+                        <span class="ampersand">&amp;</span>
+                        <div class="bride-name">Yara Hossam Abushahba</div>
                     </div>
 
                     <div class="divider">❖</div>
@@ -652,7 +606,7 @@
                         </div>
                     </div>
 
-                    <!-- Full Arabic Blessing Section Restored -->
+                    <!-- Full Arabic Blessing Section -->
                     <div class="arabic-blessing">
                         اللهم بارك لهما وبارك عليهما واجمع بينهما في خير<br>
                         واغنهما بحلالك عن حرامك وهب لهما الذرية الصالحة.
@@ -670,8 +624,8 @@
                     <!-- RSVP Section -->
                     <div class="rsvp-section" onclick="event.stopPropagation();">
                         
-                        <div class="rsvp-deadline">RSVP by: November 28th, 2026</div>
                         <div class="rsvp-title">Kindly RSVP</div>
+                        <div class="rsvp-deadline">RSVP by: November 28th, 2026</div>
 
                         <form action="https://formspree.io/f/xzebyagr" method="POST">
                             
@@ -744,7 +698,7 @@
             if (!envelopeWrapper.classList.contains('open')) {
                 envelopeWrapper.classList.add('open');
                 if (weddingMusic) {
-                    weddingMusic.play().catch(e => console.log("Audio play blocked by browser policies until click interaction."));
+                    weddingMusic.play().catch(e => console.log("Audio play blocked by browser policies until user click interaction."));
                 }
             }
         });
